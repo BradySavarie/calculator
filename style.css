@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -28,12 +28,11 @@ html {
     background-color: #2b2b2b;
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.3);
     border-radius: .5rem;
-    overflow: hidden;
 }
 
 .display {
     margin: 2.75rem .4625rem 0 .4265rem;
-    padding: .4625rem 0;
+    padding: .4625rem 0.25rem 0 0;
     box-shadow: inset 0 0 15px 0 rgba(0, 0, 0, 0.3);
     border-radius: 0.25rem;
     display: flex;
@@ -41,7 +40,7 @@ html {
     align-items: flex-end;
     background-color: white;
     color: #2b2b2b;
-    font-family: 'Martian Mono', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 2.5rem;
     line-height: 1;
 }
@@ -56,11 +55,6 @@ html {
 
 .operator {
     background-color: #FFC21C;
-}
-
-.modifier, .memory {
-    background-color: white;
-    color: #2b2b2b
 }
 
 .equals {
@@ -82,11 +76,11 @@ button {
     font-size: 0.75em;
     padding: 0.75em 1em;
     border: 0;
-  }
+}
 
   button:hover {
     transform: scale(1.05);
     background-color: #79d5ec;
     cursor: pointer;
     color: white;
-  }
+}

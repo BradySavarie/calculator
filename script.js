@@ -30,5 +30,5 @@ const clearEntryBtn = document.getElementById('clearEntry');
 function displayValue(value) {
     display.textContent = `${value}`;
 }
+displayValue(currentValue);
 
-console.log(displayValue(9));
