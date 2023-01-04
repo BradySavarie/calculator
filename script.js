@@ -148,6 +148,7 @@ function divide(a, b) {
 
 function toPercentage(a) {
     currentValue = +parseFloat((a / 100).toFixed(9));
+    currentValue = currentValue.toString();
 };
 
 function invertSign(a) {
@@ -163,7 +164,8 @@ function allClear() {
 };
 
 function clearEntry() {
-    currentValue = currentValue.slice(0, -1);
+    currentValue = currentValue.toString();
+    currentValue = +currentValue.slice(0, -1);
 };
 
 // limit display width based on controls div
