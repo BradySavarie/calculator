@@ -97,10 +97,12 @@ equalsBtn.addEventListener('click', );
 */
 allClearBtn.addEventListener('click', () => {
     allClear();
+    displayValue(currentValue);
 });
-/*
-clearEntryBtn.addEventListener('click', );
-*/
+clearEntryBtn.addEventListener('click', () => {
+    clearEntry();
+    displayValue(currentValue);
+});
 
 // functions //
 
@@ -157,11 +159,10 @@ function allClear() {
     operand1 = defaultValue;
     operand2 = defaultValue;
     operator = defaultValue;
-    displayValue(currentValue);
 };
 
 function clearEntry() {
-
+    currentValue = currentValue.slice(0, -1);
 };
 
 // limit display width based on controls div
