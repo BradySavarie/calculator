@@ -106,9 +106,12 @@ divideBtn.addEventListener('click', () => {
     displayValue(operator);
 });
 
-/*
-equalsBtn.addEventListener('click', );
-*/
+equalsBtn.addEventListener('click', () => {
+    storeOperand2(currentValue);
+    operate();
+    displayValue(currentValue);
+});
+
 allClearBtn.addEventListener('click', () => {
     allClear();
     displayValue(currentValue);
@@ -181,6 +184,25 @@ function allClear() {
 
 function clearEntry() {
     currentValue = currentValue.slice(0, -1);
+};
+
+function operate() {
+    if (operator === '+') {
+        currentValue = add(operand1, operand2);
+        currentValue = currentValue.toString();
+        return;
+    } else if (operator === '-') {
+        currentValue = subtract(operand1, operand2);
+        currentValue = currentValue.toString();
+        return;
+    } else if (operator === '÷') {
+        currentValue = divide(operand1, operand2);
+        currentValue = currentValue.toString();
+        return
+    } else if (operator === '×') {
+        currentValue = multiply(operand1, operand2);
+        currentValue = currentValue.toString();
+    };
 };
 
 // limit display width based on controls div
