@@ -85,12 +85,26 @@ percentBtn.addEventListener('click', () => {
     toPercentage(currentValue);
     displayValue(currentValue);
 });
-/*
-addBtn.addEventListener('click', );
-subtractBtn.addEventListener('click', );
-multiplyBtn.addEventListener('click', );
-divideBtn.addEventListener('click', );
-*/
+addBtn.addEventListener('click', () => {
+    storeOperand1(currentValue);
+    storeOperator('+');
+    displayValue(operator);
+});
+subtractBtn.addEventListener('click', () => {
+    storeOperand1(currentValue);
+    storeOperator('-');
+    displayValue(operator);
+});
+multiplyBtn.addEventListener('click', () => {
+    storeOperand1(currentValue);
+    storeOperator('×');
+    displayValue(operator);
+});
+divideBtn.addEventListener('click', () => {
+    storeOperand1(currentValue);
+    storeOperator('÷');
+    displayValue(operator);
+});
 
 /*
 equalsBtn.addEventListener('click', );
@@ -120,6 +134,7 @@ function updateCurrentValue(newValue) {
 
 function storeOperand1(value) {
     operand1 = +value;
+    currentValue = defaultValue;
 };
 
 function storeOperand2(value) {
@@ -152,7 +167,8 @@ function toPercentage(a) {
 };
 
 function invertSign(a) {
-    currentValue = +a * -1;
+    a = +a
+    currentValue = a * -1;
     currentValue = currentValue.toString();
 };
 
@@ -164,8 +180,7 @@ function allClear() {
 };
 
 function clearEntry() {
-    currentValue = currentValue.toString();
-    currentValue = +currentValue.slice(0, -1);
+    currentValue = currentValue.slice(0, -1);
 };
 
 // limit display width based on controls div
