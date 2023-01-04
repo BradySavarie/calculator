@@ -81,7 +81,10 @@ signBtn.addEventListener('click', () => {
     invertSign(currentValue);
     displayValue(currentValue);
 });
-
+percentBtn.addEventListener('click', () => {
+    toPercentage(currentValue);
+    displayValue(currentValue);
+});
 /*
 addBtn.addEventListener('click', );
 subtractBtn.addEventListener('click', );
@@ -89,21 +92,20 @@ multiplyBtn.addEventListener('click', );
 divideBtn.addEventListener('click', );
 */
 
-percentBtn.addEventListener('click', () => {
-    toPercentage(currentValue);
-    displayValue(currentValue);
-});
-
 /*
 equalsBtn.addEventListener('click', );
-allClearBtn.addEventListener('click', );
+*/
+allClearBtn.addEventListener('click', () => {
+    allClear();
+});
+/*
 clearEntryBtn.addEventListener('click', );
 */
 
 // functions //
 
 function displayValue(value) {
-    if (value.toString().length > 10) return;  
+    if (value.length > 10) return;  
     display.textContent = `${value}`;
 };
 
@@ -111,15 +113,15 @@ function updateCurrentValue(newValue) {
     if (currentValue === defaultValue) {
         return currentValue = newValue;
     };
-    currentValue = +`${currentValue}${newValue}`;
+    currentValue = `${currentValue}${newValue}`;
 };
 
 function storeOperand1(value) {
-    operand1 = value;
+    operand1 = +value;
 };
 
 function storeOperand2(value) {
-    operand2 = value;
+    operand2 = +value;
 };
 
 function storeOperator(value) {
@@ -143,7 +145,7 @@ function divide(a, b) {
 };
 
 function toPercentage(a) {
-    currentValue = +parseFloat((a / 100).toFixed(5));
+    currentValue = +parseFloat((a / 100).toFixed(9));
 };
 
 function invertSign(a) {
@@ -151,7 +153,11 @@ function invertSign(a) {
 };
 
 function allClear() {
-
+    currentValue = defaultValue;
+    operand1 = defaultValue;
+    operand2 = defaultValue;
+    operator = defaultValue;
+    displayValue(currentValue);
 };
 
 function clearEntry() {
