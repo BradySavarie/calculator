@@ -201,7 +201,7 @@ function operate() {
             currentValue = currentValue.toString();
             break;
         case '÷':
-            currentValue = multiply(operand1, operand2);
+            currentValue = divide(operand1, operand2);
             currentValue = currentValue.toString();
     };
 };
