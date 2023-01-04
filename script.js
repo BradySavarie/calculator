@@ -151,7 +151,8 @@ function toPercentage(a) {
 };
 
 function invertSign(a) {
-    currentValue = a * -1;
+    currentValue = +a * -1;
+    currentValue = currentValue.toString();
 };
 
 function allClear() {
