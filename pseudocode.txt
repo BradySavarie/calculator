@@ -1,20 +1,23 @@
 defaultValue is initialized to zero
 currentValue, operand1, operand2, and operator variables are declared and initialized to defaultValue
-display div is targetted and stored in display variable
-currentValue is inserted into the text content of display on window load
+currentValue is sent as input to displayValue function on window load
+display div and all buttons are targetted for DOM and stored in variables
+attach event listeners to each button that senses clicks
+write following functions:
+    updateCurrentValue, displayValue, storeOperand1, storeOperand2, storeOperator, add, subtract, multiply, divide, operate, invertSign, toPercentage, allClear, clearEntry
+add the appropriate functions onto the event listener for each button
 
-first task it to write 5 functions: add, subtract, multiply, divide, percent.
-
-when any digit is clicked, currentValue gets updated via updateCurrentValue function
+when any digit is clicked, updateCurrentValue and displayValue functions are called
 the updateCurrentValue function either replaces defaultValue or gets appended to the end of the currentValue
-updated currentValue replaces the text content of display variable
+
+when any operator is clicked, updateOperand1, updateOperator, and displayValue functions are called
+displayValue receives the operator as input in this case 
+
+updateOperand1 stores the currentValue in the operand1 variable
+updateOperator stores the chosen operator in the operator variable
 
 Once I have these functions ready I will need an operate function that takes 3 parameters: operand1, operand2, operator.
 
-when an operator button is clicked, the currentValue gets stored in variable operand1, operator variable is updated to the operator chosen, and the operator is displayed on screen
-
-
-the following values that are entered replace the content in the currentValue variable (displayed again as entered)
 when equals is clicked, the currentValue gets stores in operand2 and the operate function is called.
 
 currentValue, which gets updated when a digit is clicked via an updateCurrentValue function
@@ -23,6 +26,6 @@ the digit either replaces the default value of 0 or gets appended to the end of 
 add clear entry button functionality
 when button is clicked, the last digit of the current value gets deleted or replaced with zero if only 1 digit. 
 
-the operate function will validate input, and then decide which arithmetic function to run the operands through based on which operator is selected. the return value is then displayed.
+the operate function will validate input, and then decide which arithmetic function to run the operands through based on operator variable value. the return value is then displayed.
 
-All clear button should reset currentValue to default value and clear operand1 and operand2 variables.
+All clear button should reset currentValue to default value and clear operand1, operand2 and operator variables.
