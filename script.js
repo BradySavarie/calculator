@@ -187,21 +187,22 @@ function clearEntry() {
 };
 
 function operate() {
-    if (operator === '+') {
-        currentValue = add(operand1, operand2);
-        currentValue = currentValue.toString();
-        return;
-    } else if (operator === '-') {
-        currentValue = subtract(operand1, operand2);
-        currentValue = currentValue.toString();
-        return;
-    } else if (operator === '÷') {
-        currentValue = divide(operand1, operand2);
-        currentValue = currentValue.toString();
-        return
-    } else if (operator === '×') {
-        currentValue = multiply(operand1, operand2);
-        currentValue = currentValue.toString();
+    switch (operator) {
+        case '+':
+            currentValue = add(operand1, operand2);
+            currentValue = currentValue.toString();
+            break;
+        case '-':
+            currentValue = subtract(operand1, operand2);
+            currentValue = currentValue.toString();
+            break;
+        case '×':
+            currentValue = multiply(operand1, operand2);
+            currentValue = currentValue.toString();
+            break;
+        case '÷':
+            currentValue = multiply(operand1, operand2);
+            currentValue = currentValue.toString();
     };
 };
 
