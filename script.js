@@ -201,7 +201,7 @@ function operate() {
             currentValue = currentValue.toString();
             break;
         case '÷':
-            if (operand2 === '0') {
+            if (operand2 === defaultValue) {
                 currentValue = 'DOOFUS';
                 break;
             }
