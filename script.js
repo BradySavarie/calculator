@@ -124,67 +124,67 @@ clearEntryBtn.addEventListener('click', () => {
 // functions //
 
 function displayValue(value) {
-    if (value.length > 10) return;  
+    if (value.length > 10) return;
     display.textContent = `${value}`;
-};
+}
 
 function updateCurrentValue(newValue) {
     if (currentValue === defaultValue) {
-        return currentValue = newValue;
-    };
+        return (currentValue = newValue);
+    }
     currentValue = `${currentValue}${newValue}`;
-};
+}
 
 function storeOperand1(value) {
     operand1 = +value;
     currentValue = defaultValue;
-};
+}
 
 function storeOperand2(value) {
     operand2 = +value;
-};
+}
 
 function storeOperator(value) {
     operator = value;
-};
+}
 
 function add(a, b) {
     return a + b;
-};
+}
 
 function subtract(a, b) {
     return a - b;
-};
+}
 
 function multiply(a, b) {
     return a * b;
-};
+}
 
 function divide(a, b) {
     return a / b;
-};
+}
 
 function toPercentage(a) {
     currentValue = +parseFloat((a / 100).toFixed(9));
     currentValue = currentValue.toString();
-};
+}
 
 function invertSign(a) {
-    a = +a
+    a = +a;
     currentValue = a * -1;
     currentValue = currentValue.toString();
-};
+}
 
 function allClear() {
     currentValue = defaultValue;
     operand1 = defaultValue;
     operand2 = defaultValue;
     operator = defaultValue;
-};
+}
 
 function clearEntry() {
     currentValue = currentValue.slice(0, -1);
-};
+}
 
 function operate() {
     switch (operator) {
@@ -207,8 +207,8 @@ function operate() {
             }
             currentValue = divide(operand1, operand2);
             currentValue = currentValue.toString();
-    };
-};
+    }
+}
 
 // limit display width based on controls div
 display.style.maxWidth = `${controlsDiv[0].clientWidth}px`;
@@ -216,4 +216,4 @@ display.style.maxWidth = `${controlsDiv[0].clientWidth}px`;
 // default loadup
 window.onload = () => {
     displayValue(currentValue);
-}
+};
