@@ -128,8 +128,10 @@ function displayValue(value) {
     display.textContent = `${value}`;
 }
 
+// eslint-disable-next-line consistent-return
 function updateCurrentValue(newValue) {
     if (currentValue === defaultValue) {
+        // eslint-disable-next-line no-return-assign
         return (currentValue = newValue);
     }
     currentValue = `${currentValue}${newValue}`;
@@ -170,6 +172,7 @@ function toPercentage(a) {
 }
 
 function invertSign(a) {
+    // eslint-disable-next-line no-param-reassign
     a = +a;
     currentValue = a * -1;
     currentValue = currentValue.toString();
@@ -187,6 +190,7 @@ function clearEntry() {
 }
 
 function operate() {
+    // eslint-disable-next-line default-case
     switch (operator) {
         case '+':
             currentValue = add(operand1, operand2);
