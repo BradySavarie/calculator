@@ -1,6 +1,6 @@
 <h1>🤓 myCalculator</h1>
 
-<h2>A Basic Responsive Calculator Application!</h2>
+<h2>A Basic Responsive Calculator Application</h2>
 
 <img width="1280" alt="Calculator" src="https://user-images.githubusercontent.com/106128212/218346724-2a6b4ab7-105f-4a10-a91f-bf2f77291a08.png">
 
